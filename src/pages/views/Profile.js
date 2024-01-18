@@ -24,7 +24,7 @@ const Profile = () => {
                 <nav>
                     <a
                         href="/"
-                        className="right-20 flex pt-8 absolute text-xl text-white hover:text-blue-200 hover:underline"
+                        className="right-10 md:right-20 flex pt-8 absolute text-sm  md:text-xl text-white hover:text-blue-200 hover:underline"
                     >
                         Back
                     </a>
@@ -32,7 +32,7 @@ const Profile = () => {
             </header>
 
             <div className="relative top-0 m-auto w-full h-full flex flex-col items-center justify-center filter-none">
-                <div class="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 bg-black">
+                <div class="flex flex-col justify-center max-w-xs p-6 shadow-xl rounded-xl sm:px-12 bg-zinc-800">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVzE-ZqfmCo2rEmq0nPom0rv8GSKD6NHa0YQ&usqp=CAU" alt="" class="w-32 h-32 mx-auto rounded-full aspect-square" />
                     <div class="space-y-4 text-center divide-y dark:divide-gray-700">
                         <div class="my-2 space-y-1">

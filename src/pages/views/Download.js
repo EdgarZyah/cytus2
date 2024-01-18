@@ -6,11 +6,11 @@ import React from 'react';
 
     const Download = () => {
         return (
-            <div className="w-full h-screen py-48 text-left flex flex-col items-center bg-black space-y-5">
-                <div className='text-center w-1/2 space-y-20'>
+            <div className="w-full h-full md:h-screen py-20 text-left flex flex-col items-center bg-black space-y-5">
+                <div className='text-center w-1/2 pb-20'>
                     <h1 className='text-4xl text-bold'>Download</h1>
                 </div>
-                <div className='flex-wrap space-y-12 w-1/2'>
+                <div className='flex-wrap space-y-12 w-full px-8 md:w-1/2'>
                     <div className='w-full space-y-5 my-auto flex-row'>
                         <img className='w-96 my-auto h-full' src='https://rayark.com/g/cytus2/assets/image/prod_cytus.png'></img>
                         <p className='text-justify'>Cytus II is a music rhythm game created by Rayark. Based on the instinctively simple gameplay

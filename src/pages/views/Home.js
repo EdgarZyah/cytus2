@@ -73,8 +73,8 @@ const Home = () => {
                     <Sidebar />
                 </nav>
             </header>
-            <section id="Landingpage" className="w-full h-full flex items-center justify-center">
-                <div className="flex-row w-1/2 space-y-3 flex-row">
+            <section id="Landingpage" className="w-full h-screen flex items-center justify-center">
+                <div className="w-full px-4 flex-wrap space-y-24 md:space-y-4 md:w-1/2 flex-row">
                     <audio
                         autoPlay
                         loop
@@ -98,7 +98,7 @@ const Home = () => {
                             />
                         </div>
                     </div>
-                    <div className="flex-row items-center justify-center text-lg text-center">
+                    <div className="flex-row items-center justify-center text-xs md:text-lg text-center">
                         <p className="text-lg text-center">
                             The interconnected internet platforms have become more substantial than any country or corporation.
                             Humans have redefined the “net” and how we interact with it.

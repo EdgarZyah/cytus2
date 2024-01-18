@@ -17,13 +17,13 @@ const navigation = [
 const Sidebar = () => {
     return (
         <div className="text-white h-full w-1/4 flex fixed right-0">
-            <div className="font-serif text-6xl text-white font-semibold m-auto h-min w-min">
+            <div className="font-serif text-xs text-white font-semibold m-auto h-min w-min md:text-xl ">
                 <ul className="space-y-5">
                     {navigation.map((item, index) => (
                         <li key={index}>
                             <Link
                                 to={item.href}
-                                className="text-xl text-white hover:text-blue-200 hover:underline"
+                                className="text-xs md:text-2xl text-white hover:text-blue-200 hover:underline"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     if (item.href.startsWith('/#')) {

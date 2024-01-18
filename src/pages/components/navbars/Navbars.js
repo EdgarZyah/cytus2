@@ -31,46 +31,11 @@ const Navbar = () => {
                     <a href="/#" className="font-serif text-6xl text-white font-semibold">
                         <img
                             src="https://rayark.com/g/cytus2/assets/image/logo_large.png"
-                            className="w-80 h-auto"
-                            alt="Nier Icon"
+                            className="w-40 md:w-80 h-auto"
+                            alt="cytus icon"
                         />
                     </a>
-                    <div className="lg:hidden">
-                        <button
-                            onClick={() => setIsOpen(!isOpen)}
-                            className="block text-4xl text-white hover:text-NieR focus:outline-none"
-                        >
-                            ☰
-                        </button>
-                    </div>
-                    <div className="hidden lg:flex space-x-8 lg:space-x-4 lg:block">
-                        {navigation.map((item, index) => (
-                            <a
-                                key={index}
-                                href={item.href}
-                                className="text-2xl text-white hover:text-NieR"
-                            >
-                                {item.name}
-                            </a>
-                        ))}
-                    </div>
                 </div>
-                {isOpen && (
-                    <div className="lg:hidden">
-                        <ul className="mt-2 space-y-2">
-                            {navigation.map((item, index) => (
-                                <li key={index}>
-                                    <a
-                                        href={item.href}
-                                        className="block text-2xl text-white hover:text-NieR"
-                                    >
-                                        {item.name}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                )}
             </div>
         </nav>
     );

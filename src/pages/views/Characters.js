@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
-
+import ReactAudioPlayer from 'react-audio-player';
 // Function to generate random positions
 const getRandomPosition = () => ({
     top: `${Math.random() * 10}vh`,
@@ -21,6 +21,7 @@ const charactersData = [
         banner: 'https://rayark.com/g/cytus2/assets/image/charLogo_paff.png',
         motion: 'https://rayark.com/g/cytus2/assets/image/motion/PAFF/Blue_glow.svg',
         motionfix: 'https://rayark.com/g/cytus2/assets/image/motion/PAFF/Audience.png',
+        audio: 'https://rayark.com/g/cytus2/assets/audio/MP3/PAFF.mp3',
         description: [
             "A singer and commercial star who enjoys immense popularity; a 24 year old girl who seems born to be in the spotlight, whether it's the virtual world or the real world.",
             "The number of fans she has is astonishing. She can hold virtual concerts non-stop for a whole week and every single session will still be packed to the brim. ",
@@ -35,6 +36,7 @@ const charactersData = [
         banner: 'https://rayark.com/g/cytus2/assets/image/charLogo_neko.png',
         motion: 'https://rayark.com/g/cytus2/assets/image/close_popup.png',
         motionfix: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1200px-HD_transparent_picture.png',
+        audio: 'https://rayark.com/g/cytus2/assets/audio/MP3/NEKO.mp3',
         description: [
             "A popular streamer who has a group of diehard fans.",
             "Enjoys streaming herself playing video games and chatting with her audience about all kinds of gossip.",
@@ -49,6 +51,7 @@ const charactersData = [
         banner: 'https://rayark.com/g/cytus2/assets/image/charLogo_robo.png',
         motion: 'https://rayark.com/g/cytus2/assets/image/motion/ROBO/Electrocardiogram_BLUE2.gif',
         motionfix: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1200px-HD_transparent_picture.png',
+        audio: 'https://rayark.com/g/cytus2/assets/audio/MP3/ROBO_Head.mp3',
         description: [
             "A weird character sporting mechanical speech and judges everything based solely on data.",
             "An analytics nerd; dabbles with all kinds of information on the net. Reposts articles that caught his eye to his own SNS page.His occasional radio show has garnered a minor following.",
@@ -62,6 +65,7 @@ const charactersData = [
         banner: 'https://rayark.com/g/cytus2/assets/image/charLogo_xenon.png',
         motion: 'https://rayark.com/g/cytus2/assets/image/motion/Xenon/Skull_glow.svg',
         motionfix: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1200px-HD_transparent_picture.png',
+        audio: 'https://rayark.com/g/cytus2/assets/audio/MP3/Xenon.mp3',
         description: [
             "A system security administrator who works at A.R.C; has access to lower levels of the system.",
             "A highly skilled programmer and leader/guitarist of the personal band Xenon.",
@@ -76,6 +80,7 @@ const charactersData = [
         banner: 'https://rayark.com/g/cytus2/assets/image/charLogo_conner.png',
         motion: 'https://rayark.com/g/cytus2/assets/image/motion/ConneR/ConneR_Note_bg.svg',
         motionfix: 'https://rayark.com/g/cytus2/assets/image/motion/ConneR/ConneR_Note_bg.svg',
+        audio: 'https://rayark.com/g/cytus2/assets/audio/MP3/ConneR.mp3',
         description: [
             "A collector, performer and archaeologist who specializes in ancient instruments and fuses them into his music. ",
             "A middle-aged gentleman who acts in a graceful and elegant manner.",
@@ -90,6 +95,7 @@ const charactersData = [
         banner: 'https://rayark.com/g/cytus2/assets/image/charLogo_cherry.png',
         motion: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1200px-HD_transparent_picture.png',
         motionfix: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1200px-HD_transparent_picture.png',
+        audio: 'https://rayark.com/g/cytus2/assets/audio/MP3/Cherry.mp3',
         description: [
             "The leader and guitarist for the band Cherry PuNK",
             "Had a complicated and eventful relationship with Xenon in the past",
@@ -100,13 +106,15 @@ const charactersData = [
     // Add data for other characters similarly
 ];
 
-const Character = ({ name, image, bg, banner, motionfix, motion, description }) => (
+const Character = ({ name, image, bg, banner, motionfix, motion, description, audio }) => (
     <div className="character-container w-full h-screen py-48 text-left flex flex-col items-center bg-black">
-        <div className='w-1/2 h-min flex flex-row    '>
-            <img src={bg} alt={`${name} background`} className="character-bg w-full h-80 opacity-50" />
-            <img src={banner} alt={`${name} banner`} className="character-banner w-28 h-min absolute" />
-            <img src={image} alt={`${name} image`} className="character-image w-1/2 h-min absolute right-80 top-32 z-10" />
-            <div className="character-description absolute w-2/6 pt-36 p-2 z-20 text-gray-400">
+        <div className='w-full md:w-1/2 h-min flex flex-wrap md:flex-row mx-auto'>
+            <img src={image} alt={`${name} image`} className="character-image w-full md:w-1/2 md:h-min md:absolute md:right-80 top-32 z-10" />
+            <img src={banner} alt={`${name} banner`} className="character-banner pt-8 pl-8 w-40 md:pt-0 h-min absolute" />
+            <img src={bg} alt={`${name} background`} className="character-bg w-full h-60 md:h-80 opacity-50" />
+            
+
+            <div className="character-description absolute md:w-2/6 pt-72 md:pt-36 p-2 z-20 text-gray-400">
                 {description.map((paragraph, index) => (
                     <p key={index}>{paragraph}</p>
                 ))}
