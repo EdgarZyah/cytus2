@@ -16,6 +16,11 @@ const Home = () => {
         width: '100%',
     };
 
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        element.scrollIntoView({ behavior: 'smooth' });
+    };
+
     useEffect(() => {
         document.title = 'Cytus II';
     }, []);
@@ -49,7 +54,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div id='#' style={hero1} className="flex-row relative bg-cover bg-center w-full h-full  items-center justify-center text-white">
+        <div id='1' style={hero1} className="flex-row relative bg-cover bg-center w-full h-full  items-center justify-center text-white">
             {loading && (
                 <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50">
                     <img
@@ -105,13 +110,13 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section id="characters" className="w-full h-full">
+            <section id="2" className="w-full h-full">
                 <Characters />
             </section>
-            <section id="gameplay" className="w-full h-full">
+            <section id="3" className="w-full h-full">
                 <Gameplay />
             </section>
-            <section id="download" className="w-full h-full">
+            <section id="4" className="w-full h-full">
                 <Download />
             </section>
         </div>

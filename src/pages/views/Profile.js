@@ -15,11 +15,19 @@ const Profile = () => {
     return (
         <div style={hero1} className="relative bg-cover bg-center h-full items-center justify-center text-white">
             <header id="header" className="absolute inset-x-0 top-0 z-50">
-                <nav className="py-2 bg-black opacity-90">
+                <nav className="">
                     <Navbar />
                 </nav>
                 <nav className="sticky absolute m-auto w-min h-full flex flex-col items-center">
                     <Sidebar />
+                </nav>
+                <nav>
+                    <a
+                        href="/"
+                        className="right-20 flex pt-8 absolute text-xl text-white hover:text-blue-200 hover:underline"
+                    >
+                        Back
+                    </a>
                 </nav>
             </header>
 

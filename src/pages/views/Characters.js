@@ -111,7 +111,7 @@ const Character = ({ name, image, bg, banner, motionfix, motion, description }) 
                     <p key={index}>{paragraph}</p>
                 ))}
             </div>
-            <img style={imageStyle} src={motion} className="character-image w-20 rotate-45 h-min absolute right-60 pt-10 " />
+            <img style={imageStyle} src={motion} className="character-image w-10 rotate-45 h-min absolute right-60 pt-10 " />
         </div>
         <img src={motionfix} className="character-image w-full h-min absolute bottom-0 " />
     </div>
