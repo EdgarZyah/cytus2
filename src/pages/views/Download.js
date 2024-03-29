@@ -6,7 +6,7 @@ import React from 'react';
 
     const Download = () => {
         return (
-            <div className="w-full h-full md:h-screen py-20 text-left flex flex-col items-center bg-black space-y-5">
+            <div className="w-full h-full md:h-full py-0 text-left flex flex-col items-center bg-black space-y-5">
                 <div className='text-center w-1/2 pb-20'>
                     <h1 className='text-4xl text-bold'>Download</h1>
                 </div>
